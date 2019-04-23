@@ -3,7 +3,7 @@ package com.cgi.calculator;
 public class MathsEquation {
     private double leftVal;
     private double rightVal;
-    private char opCode;
+    private char opCode = 'a';
     private double result;
 
     public double getLeftVal() { return leftVal; }
@@ -14,7 +14,32 @@ public class MathsEquation {
     public void setOpCode(char opCode) {this.opCode = opCode;}
 
     public double getResult() {return result;}
+    //empty constructor
+    public MathsEquation(){}
+    //opCode constructor which creates opcode
+    public  MathsEquation(char opCode){
+        this.opCode = opCode;
+    }
+    //value constructor
+    public  MathsEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);//calls opCode constructor
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
 
+    }
+public void execute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+       execute();
+    }
+    public void execute(int leftVal, int rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+        execute();
+        result = (int)result;
+    }
+    //method below called execute when execute is called
+ //depending on opCode will depend on equation
     public void execute() {
         switch (opCode) {
             case 'a':
@@ -35,7 +60,7 @@ public class MathsEquation {
                 break;
         }
 
-
     }
+
 
 }
