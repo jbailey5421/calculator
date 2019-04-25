@@ -1,32 +1,40 @@
-package com.cgi.calculator;
+package com.cgi.calculator.myapp;
 
-import javax.swing.text.TabExpander;
+
+import com.cgi.calculator.calculator.Adder;
+import com.cgi.calculator.calculator.CalculateBase;
+import com.cgi.calculator.calculator.Divider;
+import com.cgi.calculator.calculator.DynamicHelper;
+import com.cgi.calculator.calculator.MathProcessing;
+import com.cgi.calculator.calculator.MathsEquation;
+import com.cgi.calculator.calculator.Multiplier;
+import com.cgi.calculator.calculator.PowerOf;
+import com.cgi.calculator.calculator.Subtracter;
 
 public class Main {
 
     public static void main(String[] args) {
 
     String[] statements = {
-      "add 1.0",
-      "add xx 25.0",
-      "addX 0.0 0.0",
-      "divide 100.0 50.0",
-      "add 25.0 92.0",
-      "subtract 225.0 17.0",
-      "multiply 11.0 3.0"
+        "add 25.0 92.0",
+        "power 5.0 2.0",
+        "divide 250.0 50.0",
+        "multiply 100.0 10.0",
+        "subtract 50.0 150.0"
     };
-    CalculateHelper helper = new CalculateHelper();
-
-    for(String statement:statements) {
-        try {
-            helper.process(statement);
-            System.out.println(helper);
-        }catch (InvalidStatementException e) {
-            System.out.println(e.getMessage());
-            if(e.getCause()!= null)
-                System.out.println("original exception: " + e.getCause().getMessage());
-        }
+        DynamicHelper helper = new DynamicHelper(new MathProcessing[]{
+            new Adder(),
+            new PowerOf(),
+            new Divider(),
+            new Multiplier(),
+            new Subtracter()
+        });
+    for(String statement:statements){
+        String output = helper.process(statement);
+        System.out.println(output);
     }
+    //CalculateHelper helperl = new CalculateHelper();
+
 
         MathsEquation[] equations = new MathsEquation[4];
         equations[0] = new MathsEquation('d', 100.0d, 50.0d);
@@ -72,6 +80,7 @@ public class Main {
                 new Subtracter(225.0D, 17.0D),
                 new Multiplier(11.0D, 3.0D)
         };
+
         for(CalculateBase calculator:calcualtors) {
             calculator.calculate();
             System.out.print("result=");

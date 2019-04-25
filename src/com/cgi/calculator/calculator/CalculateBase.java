@@ -1,4 +1,4 @@
-package com.cgi.calculator;
+package com.cgi.calculator.calculator;
 
 public abstract class CalculateBase {
     private double leftVal;

@@ -1,4 +1,4 @@
-package com.cgi.calculator;
+package com.cgi.calculator.calculator;
 
 public class InvalidStatementException extends  Exception {
     public InvalidStatementException(String reason, String statement) {

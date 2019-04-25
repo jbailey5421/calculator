@@ -1,4 +1,4 @@
-package com.cgi.calculator;
+package com.cgi.calculator.calculator;
 
 public class MathsEquation {
     private double leftVal;
