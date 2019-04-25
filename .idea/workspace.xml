@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c2924f4-f1d1-4f3f-9f5f-f9fde1e4a7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cgi/calculator/MathCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cgi/calculator/InvalidStatementException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/calculator/com/cgi/calculator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/com/cgi/calculator/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cgi/calculator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cgi/calculator/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="26" column="85" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -76,8 +77,9 @@
         <option value="$PROJECT_DIR$/src/com/cgi/calculator/CalculateBase.java" />
         <option value="$PROJECT_DIR$/src/com/cgi/calculator/MathsEquation.java" />
         <option value="$PROJECT_DIR$/src/com/cgi/calculator/MathCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/cgi/calculator/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/cgi/calculator/InvalidStatementException.java" />
         <option value="$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/cgi/calculator/Main.java" />
       </list>
     </option>
   </component>
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556023895549</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added more refactoring on the data types such as primitive wrappers and final fields">
+      <created>1556177348339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556177348339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -191,8 +200,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32932165" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32275712" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32275712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -243,7 +252,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="added accessors and mutator" />
     <MESSAGE value="added class inheritance and provided override in replacement of the switch statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="added class inheritance and provided override in replacement of the switch statement" />
+    <MESSAGE value="added more refactoring on the data types such as primitive wrappers and final fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more refactoring on the data types such as primitive wrappers and final fields" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/calculator$Main.ic" NAME="Main Coverage Results" MODIFIED="1556177246785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -310,17 +320,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/InvalidStatementException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/CalculateHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cgi/calculator/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="85" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
         </state>
       </provider>
     </entry>
